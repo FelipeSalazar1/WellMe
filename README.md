@@ -296,11 +296,3 @@ Para executar os testes:
 ./mvnw test
 ```
 
-## 📄 Licença
-
-Este projeto é um exemplo acadêmico desenvolvido para demonstrar conceitos de SOA e Web Services.
-
-## 👥 Autor
-
-Desenvolvido como projeto acadêmico seguindo os requisitos de Arquitetura Orientada a Serviços e Web Services.
-
