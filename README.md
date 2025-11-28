@@ -49,32 +49,6 @@ O projeto segue os princípios de **Arquitetura Orientada a Serviços (SOA)** co
 - **Exception Handling**: Tratamento centralizado de exceções
 - **Validation**: Validação de entrada para prevenir injeções e erros
 
-## ✅ Requisitos Atendidos
-
-### Integração por Web Services (20%)
-- ✅ Implementação de APIs RESTful para comunicação entre sistemas
-- ✅ Uso adequado de métodos HTTP (GET, POST, PUT, DELETE)
-- ✅ Documentação das APIs com README
-
-### Arquitetura Orientada a Serviços (SOA) (20%)
-- ✅ Organização modular baseada em serviços independentes e reutilizáveis
-- ✅ Separação clara entre camadas de apresentação, serviço e dados
-
-### Padrões e Boas Práticas (15%)
-- ✅ Adoção de padrões REST, JSON
-- ✅ Tratamento adequado de erros e exceções nos serviços
-
-### Segurança em Web Services (15%)
-- ✅ Validação de entrada para evitar injeções e outros ataques
-
-### Interoperabilidade e Escalabilidade (15%)
-- ✅ Capacidade dos serviços de se comunicarem com diferentes plataformas
-- ✅ Design escalável e preparado para aumento de carga ou novas integrações
-
-### Conexão com Banco de Dados (15%)
-- ✅ Dependências e configurações para conexão
-- ✅ Controle de migrações com Flyway
-
 ## 🚀 Instalação e Execução
 
 ### Pré-requisitos
@@ -321,12 +295,4 @@ Para executar os testes:
 ```bash
 ./mvnw test
 ```
-
-## 📄 Licença
-
-Este projeto é um exemplo acadêmico desenvolvido para demonstrar conceitos de SOA e Web Services.
-
-## 👥 Autor
-
-Desenvolvido como projeto acadêmico seguindo os requisitos de Arquitetura Orientada a Serviços e Web Services.
 
