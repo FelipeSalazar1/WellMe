@@ -1,0 +1,813 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-01-15T10:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "req_pacientes_listar",
+      "parentId": "fld_pacientes",
+      "modified": 1705312800000,
+      "created": 1705312800000,
+      "url": "{{ _.base_url }}/api/v1/pacientes",
+      "name": "Listar Todos os Pacientes",
+      "description": "Retorna uma lista com todos os pacientes cadastrados",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312800000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_pacientes_buscar",
+      "parentId": "fld_pacientes",
+      "modified": 1705312801000,
+      "created": 1705312801000,
+      "url": "{{ _.base_url }}/api/v1/pacientes/{{ _.paciente_id }}",
+      "name": "Buscar Paciente por ID",
+      "description": "Retorna os dados de um paciente específico",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312801000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_pacientes_criar",
+      "parentId": "fld_pacientes",
+      "modified": 1705312802000,
+      "created": 1705312802000,
+      "url": "{{ _.base_url }}/api/v1/pacientes",
+      "name": "Criar Novo Paciente",
+      "description": "Cria um novo paciente no sistema",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"João Silva\",\n  \"cpf\": \"12345678901\",\n  \"email\": \"joao.silva@email.com\",\n  \"telefone\": \"11999999999\",\n  \"dataNascimento\": \"1990-05-15\",\n  \"sexo\": \"MASCULINO\",\n  \"endereco\": \"Rua das Flores, 123\",\n  \"observacoes\": \"Paciente com histórico de hipertensão\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312802000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_pacientes_atualizar",
+      "parentId": "fld_pacientes",
+      "modified": 1705312803000,
+      "created": 1705312803000,
+      "url": "{{ _.base_url }}/api/v1/pacientes/{{ _.paciente_id }}",
+      "name": "Atualizar Paciente",
+      "description": "Atualiza os dados de um paciente existente",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"João Silva Santos\",\n  \"cpf\": \"12345678901\",\n  \"email\": \"joao.silva.santos@email.com\",\n  \"telefone\": \"11988888888\",\n  \"dataNascimento\": \"1990-05-15\",\n  \"sexo\": \"MASCULINO\",\n  \"endereco\": \"Rua das Flores, 456\",\n  \"observacoes\": \"Paciente com histórico de hipertensão - atualizado\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312803000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_pacientes_deletar",
+      "parentId": "fld_pacientes",
+      "modified": 1705312804000,
+      "created": 1705312804000,
+      "url": "{{ _.base_url }}/api/v1/pacientes/{{ _.paciente_id }}",
+      "name": "Deletar Paciente",
+      "description": "Remove um paciente do sistema",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312804000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_consultas_listar",
+      "parentId": "fld_consultas",
+      "modified": 1705312805000,
+      "created": 1705312805000,
+      "url": "{{ _.base_url }}/api/v1/consultas",
+      "name": "Listar Todas as Consultas",
+      "description": "Retorna uma lista com todas as consultas cadastradas",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312805000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_consultas_buscar",
+      "parentId": "fld_consultas",
+      "modified": 1705312806000,
+      "created": 1705312806000,
+      "url": "{{ _.base_url }}/api/v1/consultas/{{ _.consulta_id }}",
+      "name": "Buscar Consulta por ID",
+      "description": "Retorna os dados de uma consulta específica",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312806000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_consultas_por_paciente",
+      "parentId": "fld_consultas",
+      "modified": 1705312807000,
+      "created": 1705312807000,
+      "url": "{{ _.base_url }}/api/v1/consultas/paciente/{{ _.paciente_id }}",
+      "name": "Listar Consultas por Paciente",
+      "description": "Retorna todas as consultas de um paciente específico",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312807000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_consultas_criar",
+      "parentId": "fld_consultas",
+      "modified": 1705312808000,
+      "created": 1705312808000,
+      "url": "{{ _.base_url }}/api/v1/consultas",
+      "name": "Criar Nova Consulta",
+      "description": "Cria uma nova consulta no sistema",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"pacienteId\": 1,\n  \"dataHora\": \"2024-02-01T14:00:00\",\n  \"tipoConsulta\": \"Consulta de rotina\",\n  \"medico\": \"Dr. Carlos Mendes\",\n  \"observacoes\": \"Check-up anual\",\n  \"status\": \"AGENDADA\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312808000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_consultas_atualizar",
+      "parentId": "fld_consultas",
+      "modified": 1705312809000,
+      "created": 1705312809000,
+      "url": "{{ _.base_url }}/api/v1/consultas/{{ _.consulta_id }}",
+      "name": "Atualizar Consulta",
+      "description": "Atualiza os dados de uma consulta existente",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"pacienteId\": 1,\n  \"dataHora\": \"2024-02-01T15:00:00\",\n  \"tipoConsulta\": \"Consulta de rotina\",\n  \"medico\": \"Dr. Carlos Mendes\",\n  \"observacoes\": \"Check-up anual - atualizado\",\n  \"status\": \"REALIZADA\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312809000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_consultas_deletar",
+      "parentId": "fld_consultas",
+      "modified": 1705312810000,
+      "created": 1705312810000,
+      "url": "{{ _.base_url }}/api/v1/consultas/{{ _.consulta_id }}",
+      "name": "Deletar Consulta",
+      "description": "Remove uma consulta do sistema",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312810000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_exames_listar",
+      "parentId": "fld_exames",
+      "modified": 1705312811000,
+      "created": 1705312811000,
+      "url": "{{ _.base_url }}/api/v1/exames",
+      "name": "Listar Todos os Exames",
+      "description": "Retorna uma lista com todos os exames cadastrados",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312811000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_exames_buscar",
+      "parentId": "fld_exames",
+      "modified": 1705312812000,
+      "created": 1705312812000,
+      "url": "{{ _.base_url }}/api/v1/exames/{{ _.exame_id }}",
+      "name": "Buscar Exame por ID",
+      "description": "Retorna os dados de um exame específico",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312812000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_exames_por_paciente",
+      "parentId": "fld_exames",
+      "modified": 1705312813000,
+      "created": 1705312813000,
+      "url": "{{ _.base_url }}/api/v1/exames/paciente/{{ _.paciente_id }}",
+      "name": "Listar Exames por Paciente",
+      "description": "Retorna todos os exames de um paciente específico",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312813000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_exames_criar",
+      "parentId": "fld_exames",
+      "modified": 1705312814000,
+      "created": 1705312814000,
+      "url": "{{ _.base_url }}/api/v1/exames",
+      "name": "Criar Novo Exame",
+      "description": "Cria um novo exame no sistema",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"pacienteId\": 1,\n  \"tipoExame\": \"Hemograma completo\",\n  \"descricao\": \"Exame de sangue completo\",\n  \"dataExame\": \"2024-01-20\",\n  \"laboratorio\": \"Laboratório Central\",\n  \"resultado\": \"Resultados dentro da normalidade\",\n  \"status\": \"AGENDADO\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312814000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_exames_atualizar",
+      "parentId": "fld_exames",
+      "modified": 1705312815000,
+      "created": 1705312815000,
+      "url": "{{ _.base_url }}/api/v1/exames/{{ _.exame_id }}",
+      "name": "Atualizar Exame",
+      "description": "Atualiza os dados de um exame existente",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"pacienteId\": 1,\n  \"tipoExame\": \"Hemograma completo\",\n  \"descricao\": \"Exame de sangue completo\",\n  \"dataExame\": \"2024-01-20\",\n  \"laboratorio\": \"Laboratório Central\",\n  \"resultado\": \"Resultados dentro da normalidade - atualizado\",\n  \"status\": \"REALIZADO\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312815000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_exames_deletar",
+      "parentId": "fld_exames",
+      "modified": 1705312816000,
+      "created": 1705312816000,
+      "url": "{{ _.base_url }}/api/v1/exames/{{ _.exame_id }}",
+      "name": "Deletar Exame",
+      "description": "Remove um exame do sistema",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312816000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_lembretes_listar",
+      "parentId": "fld_lembretes",
+      "modified": 1705312817000,
+      "created": 1705312817000,
+      "url": "{{ _.base_url }}/api/v1/lembretes",
+      "name": "Listar Todos os Lembretes",
+      "description": "Retorna uma lista com todos os lembretes cadastrados",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312817000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_lembretes_buscar",
+      "parentId": "fld_lembretes",
+      "modified": 1705312818000,
+      "created": 1705312818000,
+      "url": "{{ _.base_url }}/api/v1/lembretes/{{ _.lembrete_id }}",
+      "name": "Buscar Lembrete por ID",
+      "description": "Retorna os dados de um lembrete específico",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312818000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_lembretes_por_paciente",
+      "parentId": "fld_lembretes",
+      "modified": 1705312819000,
+      "created": 1705312819000,
+      "url": "{{ _.base_url }}/api/v1/lembretes/paciente/{{ _.paciente_id }}",
+      "name": "Listar Lembretes por Paciente",
+      "description": "Retorna todos os lembretes de um paciente específico",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312819000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_lembretes_criar",
+      "parentId": "fld_lembretes",
+      "modified": 1705312820000,
+      "created": 1705312820000,
+      "url": "{{ _.base_url }}/api/v1/lembretes",
+      "name": "Criar Novo Lembrete",
+      "description": "Cria um novo lembrete no sistema",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"pacienteId\": 1,\n  \"titulo\": \"Tomar vacina da gripe\",\n  \"descricao\": \"Lembrete para tomar a vacina anual da gripe\",\n  \"dataLembrete\": \"2024-02-15T09:00:00\",\n  \"tipo\": \"VACINA\",\n  \"status\": \"PENDENTE\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312820000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_lembretes_atualizar",
+      "parentId": "fld_lembretes",
+      "modified": 1705312821000,
+      "created": 1705312821000,
+      "url": "{{ _.base_url }}/api/v1/lembretes/{{ _.lembrete_id }}",
+      "name": "Atualizar Lembrete",
+      "description": "Atualiza os dados de um lembrete existente",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"pacienteId\": 1,\n  \"titulo\": \"Tomar vacina da gripe\",\n  \"descricao\": \"Lembrete para tomar a vacina anual da gripe - atualizado\",\n  \"dataLembrete\": \"2024-02-15T09:00:00\",\n  \"tipo\": \"VACINA\",\n  \"status\": \"CONCLUIDO\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312821000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_lembretes_deletar",
+      "parentId": "fld_lembretes",
+      "modified": 1705312822000,
+      "created": 1705312822000,
+      "url": "{{ _.base_url }}/api/v1/lembretes/{{ _.lembrete_id }}",
+      "name": "Deletar Lembrete",
+      "description": "Remove um lembrete do sistema",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312822000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_health_check",
+      "parentId": "fld_utilidades",
+      "modified": 1705312823000,
+      "created": 1705312823000,
+      "url": "{{ _.base_url }}/api/v1/health",
+      "name": "Health Check",
+      "description": "Verifica o status da aplicação",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1705312823000,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_pacientes",
+      "parentId": "fld_wellme",
+      "modified": 1705312800000,
+      "created": 1705312800000,
+      "name": "Pacientes",
+      "description": "Endpoints para gerenciamento de pacientes",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1705312800000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_consultas",
+      "parentId": "fld_wellme",
+      "modified": 1705312800000,
+      "created": 1705312800000,
+      "name": "Consultas",
+      "description": "Endpoints para gerenciamento de consultas médicas",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1705312800000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_exames",
+      "parentId": "fld_wellme",
+      "modified": 1705312800000,
+      "created": 1705312800000,
+      "name": "Exames",
+      "description": "Endpoints para gerenciamento de exames",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1705312800000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_lembretes",
+      "parentId": "fld_wellme",
+      "modified": 1705312800000,
+      "created": 1705312800000,
+      "name": "Lembretes",
+      "description": "Endpoints para gerenciamento de lembretes",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1705312800000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_utilidades",
+      "parentId": "fld_wellme",
+      "modified": 1705312800000,
+      "created": 1705312800000,
+      "name": "Utilidades",
+      "description": "Endpoints utilitários",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1705312800000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_wellme",
+      "parentId": "wrk_wellme",
+      "modified": 1705312800000,
+      "created": 1705312800000,
+      "name": "WellMe API",
+      "description": "Collection completa da API WellMe - Assistente de Saúde Preventiva",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1705312800000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_wellme",
+      "parentId": null,
+      "modified": 1705312800000,
+      "created": 1705312800000,
+      "name": "WellMe - Assistente de Saúde Preventiva",
+      "description": "Workspace para testes da API WellMe",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_wellme",
+      "parentId": "wrk_wellme",
+      "modified": 1705312800000,
+      "created": 1705312800000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:8080",
+        "paciente_id": "1",
+        "consulta_id": "1",
+        "exame_id": "1",
+        "lembrete_id": "1"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url",
+          "paciente_id",
+          "consulta_id",
+          "exame_id",
+          "lembrete_id"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1705312800000,
+      "_type": "environment"
+    }
+  ]
+}
